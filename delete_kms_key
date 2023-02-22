@@ -1,0 +1,11 @@
+import boto3
+
+kms_client = boto3.client('kms', region_name='us-west-1')
+
+response = kms_client.schedule_key_deletion(
+   Key_Id='1ed3d1c481719089fac12967f180a626',
+   PendingWindowInDays=7
+)
+
+
+print(response, indent=4, sort_-keys=True)
